@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="/http" method="post">
+
+    <table cellpadding="0" cellspacing="0" border="1">
+
+        <tr>
+            <td>姓名</td>
+            <td><input name="name" title="姓名"></td>
+        </tr>
+
+        <tr>
+            <td>密码</td>
+            <td><input name="pwd" title="密码"></td>
+        </tr>
+
+        <tr>
+            <td>性别</td>
+            <td>
+                <input type="radio" name="sex" value="1"> 男
+                <input type="radio" name="sex" value="2"> 女
+            </td>
+        </tr>
+
+        <tr>
+            <td>爱好</td>
+            <td>
+                <input type="checkbox" name="java" value="1"> JAVA
+                <input type="checkbox" name="c" value="2"> C
+                <input type="checkbox" name="db" value="3"> DB
+            </td>
+        </tr>
+
+    </table>
+
+    <button type="submit">提交</button>
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+
+<form action="/login" method="post" name="login" onsubmit="return isEmpty()">
+    帐号<input name="name" onclick="isEmpty()"><br>
+    密码<input name="pwd" type="password"><br>
+    <BUTTON type="submit ">登录</BUTTON>
+</form>
+<script type="text/javascript">
+    // 验证表单提交的是否为空
+    function isEmpty() {
+        if (login.name.value == "" || login.name.value == null) {
+            alert("帐号不能为空")
+            return false;
+        }
+        if (login.pwd.value == "" || login.pwd.value == null) {
+            alert("帐号不能为空")
+            return false;
+        }
+        return true;
+    }
+</script>
+</body>
+</html>
