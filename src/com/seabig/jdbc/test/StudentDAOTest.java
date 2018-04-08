@@ -21,9 +21,13 @@ public class StudentDAOTest {
 //        dao.save(student);
 //        dao.delete(4);
 //        dao.dmlOperate(student);
-        Student student1 = dao.query(5);
+        Student student1 = dao.query(2);
         System.out.println(student1.toString());
+
         List<Student> students = dao.queryAll();
+        for (Student student2:students){
+            System.out.println(student2.toString());
+        }
         System.out.println(students.size());
     }
 }

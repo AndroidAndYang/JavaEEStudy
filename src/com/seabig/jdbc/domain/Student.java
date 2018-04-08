@@ -6,9 +6,9 @@ package com.seabig.jdbc.domain;
  */
 public class Student {
 
-    int id;
-    int age;
-    String name;
+    private int id;
+    private String name;
+    private int age;
 
     public int getId() {
         return id;
@@ -18,6 +18,15 @@ public class Student {
         this.id = id;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
     public int getAge() {
         return age;
     }
@@ -26,11 +35,11 @@ public class Student {
         this.age = age;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", age=" + age +
+                ", name='" + name + '\'' +
+                '}';
     }
 }

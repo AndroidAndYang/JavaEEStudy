@@ -25,25 +25,25 @@ public class BeanInfoListHelper<T> implements IResultSetHelper<List<T>> {
         // 创建当前aClass所表示的对象
         List<T> list = new ArrayList<>();
         try {
-            T obj = aClass.newInstance();
-            BeanInfo beanInfo = Introspector.getBeanInfo(aClass, Object.class);
-            // 获取该对象的所有属性
-            PropertyDescriptor[] propertyDescriptors = beanInfo.getPropertyDescriptors();
             while (resultSet.next()) {
+                T obj = aClass.newInstance();
+                BeanInfo beanInfo = Introspector.getBeanInfo(aClass, Object.class);
+                // 获取该对象的所有属性
+                PropertyDescriptor[] propertyDescriptors = beanInfo.getPropertyDescriptors();
                 for (PropertyDescriptor pro : propertyDescriptors) {
                     // 属性名(列名)
                     String name = pro.getName();
                     // 获取对应的值
                     Object value = resultSet.getObject(name);
+                    System.out.println("value = " +value);
                     // 调用属性的set方法
                     pro.getWriteMethod().invoke(obj, value);
                 }
                 list.add(obj);
             }
-            return list;
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return null;
+        return list;
     }
 }

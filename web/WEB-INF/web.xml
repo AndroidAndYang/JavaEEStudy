@@ -10,6 +10,21 @@
         <param-value>UTF-8</param-value>
     </context-param>
 
+    <!-- 全局统一错误页面 -->
+    <error-page>
+        <!-- 指明异常类型 -->
+        <!--<exception-type>java.lang.Exception</exception-type>-->
+        <!-- 异常的错误代码,只能存在一个 -->
+        <error-code>500</error-code>
+        <location>/WEB-INF/views/500.jsp</location>
+    </error-page>
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/WEB-INF/views/404.jsp</location>
+    </error-page>
+
+
     <!-- 告诉Tomcat管理哪一个类 -->
     <!-- 为Servlet命名 servlet-mapping 中的servlet-name必须和servlet中的servlet-name相同-->
 

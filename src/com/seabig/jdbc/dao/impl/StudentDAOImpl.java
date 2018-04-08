@@ -47,7 +47,7 @@ public class StudentDAOImpl implements IStudentDAO {
     public Student query(int id) {
         String sql = "SELECT * FROM user WHERE id = ? ";
         BeanInfoHelper<Student> baseResultHelper = new BeanInfoHelper<>(Student.class);
-        return JDBCTemplate.dqlOperate(sql, baseResultHelper, 5);
+        return JDBCTemplate.dqlOperate(sql, baseResultHelper, id);
     }
 
     @Override
