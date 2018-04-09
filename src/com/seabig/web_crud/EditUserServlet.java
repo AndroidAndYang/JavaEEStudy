@@ -13,10 +13,12 @@ import java.io.IOException;
 
 /**
  * @author: YJZ
- * data: 2018/4/8.
+ * data: 2018/4/9.
+ * des: 编辑用户信息,通过A标签请求servlet之后跳转到jsp中
  */
-@WebServlet("/user/list")
-public class UserListServlet extends HttpServlet {
+
+@WebServlet("/user/edit")
+public class EditUserServlet extends HttpServlet {
 
     private IStudentDAO dao;
 
@@ -27,8 +29,13 @@ public class UserListServlet extends HttpServlet {
 
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setCharacterEncoding("utf-8");
-        req.setAttribute("user_data", dao.queryAll());
-        req.getRequestDispatcher("/WEB-INF/views/web_crud/UserList.jsp").forward(req, resp);
+        System.out.println("edit");
+        String id = req.getParameter("id");
+        // id 为空表示新增,不为空表示编辑
+        if (id != null && !id.equals("")) {
+            Student user = dao.query(Integer.parseInt(id));
+            req.setAttribute("user", user);
+        }
+        req.getRequestDispatcher("/WEB-INF/views/web_crud/EditUser.jsp").forward(req, resp);
     }
 }

@@ -4,17 +4,17 @@
   User: AirBike-Work2
   Date: 2018/4/8
   Time: 21:55
-  To change this template use File | Settings | File Templates.
+  Des:  使用 JSTL 输出数据库数据
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>WEB_CRUD</title>
+    <title>用户列表</title>
 </head>
 <body>
 
-<a href="">增加用户</a>
+<a href="/user/edit">增加用户</a>
 <table cellspacing="0" cellpadding="0" border="1" width="500">
     <tr>
         <th>编号</th>
@@ -30,14 +30,12 @@
             <td align="center">${item.name}</td>
             <td align="center">${item.age}</td>
             <td align="center">
-                <a href="">删除</a>
-                <a href="">编辑</a>
+                <a href="/user/delete?id=${item.id}">删除</a>
+                <a href="/user/edit?id=${item.id}">编辑</a>
             </td>
         </tr>
     </c:forEach>
 
-
 </table>
-
 </body>
 </html>

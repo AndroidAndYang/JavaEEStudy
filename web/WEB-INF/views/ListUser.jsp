@@ -4,7 +4,7 @@
   User: AirBike-Work2
   Date: 2018/4/7
   Time: 12:59
-  To change this template use File | Settings | File Templates.
+  Des: 使用JSP输出查询到的数据库数据
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>

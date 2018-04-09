@@ -12,7 +12,7 @@
 </head>
 <body>
 <%
-    System.out.println(exception.getMessage());
+    System.out.println("error message" + exception.getMessage());
 %>
 500錯誤頁面
 <%-- 只有在page指令中声明了isErrorPage才可以使用exception对象 --%>
