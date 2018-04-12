@@ -90,7 +90,6 @@
         <url-pattern>/opt</url-pattern>
     </servlet-mapping>
 
-    <!-- LoginServlet -->
     <servlet>
         <servlet-name>Login</servlet-name>
         <servlet-class>com.seabig.cookie_session.LoginServlet</servlet-class>

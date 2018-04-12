@@ -17,7 +17,7 @@ import java.util.UUID;
  * data: 2018/4/11.
  * des: 文件上传工具类
  */
-public class FileUpload {
+public class FileUploadUtil {
 
     public static void load(HttpServletRequest req) {
         // 使用Apache FileUpload工具

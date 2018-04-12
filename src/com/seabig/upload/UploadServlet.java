@@ -1,7 +1,7 @@
 package com.seabig.upload;
 
 import com.seabig.exception.MyException;
-import com.seabig.util.FileUpload;
+import com.seabig.util.FileUploadUtil;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -30,7 +30,7 @@ public class UploadServlet extends HttpServlet {
         System.out.println("headImg =" + headImg);
         try {
             // 通过对上传文件的封装,处理上传过程中出现的异常
-            FileUpload.load(req);
+            FileUploadUtil.load(req);
         } catch (MyException e) {
             req.setAttribute("errMsg", e.getMessage());
             req.getRequestDispatcher("/upload/upload.jsp").forward(req, resp);
