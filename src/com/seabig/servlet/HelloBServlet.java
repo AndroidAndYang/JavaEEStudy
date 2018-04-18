@@ -29,8 +29,6 @@ public class HelloBServlet implements Servlet {
             String parameter = servletConfig.getInitParameter(paraName);
             System.out.println("parameter =" + parameter);
         }
-
-
     }
 
     @Override

@@ -7,7 +7,7 @@ import java.io.IOException;
  * @author: YJZ
  * data: 2018/3/29.
  * des：Servlet是单例的.Servlet只要第一次请求之后,创建好一个对象,该对象就一直存在,直到Tomcat关闭.
-        一个Servlet类,最多之后一个实例.(单实例,性能有保证,但是多个线程并发可能造成安全问题).
+ * 一个Servlet类,最多之后一个实例.(单实例,性能有保证,但是多个线程并发可能造成安全问题).
  */
 public class HelloServlet implements Servlet {
 
@@ -59,6 +59,6 @@ public class HelloServlet implements Servlet {
      */
     @Override
     public void destroy() {
-
+        System.out.println("Hello Servlet destroy");
     }
 }
